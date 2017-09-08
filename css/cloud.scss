@@ -1,0 +1,14 @@
+$white : #fff;
+$blue1 : #f2f9fe;
+*{margin:0;padding:0;}
+body{background:$white}
+
+@mixin backgroud-linear-gradient($colorS,$colorE,$point,$start,$end){
+    background:-moz-linear-gradient($point,$colorS $start,$colorE $end);
+    background:-ms-linear-gradient($point,$colorS $start,$colorE $end);
+    background:-o-linear-gradient($point,$colorS $start,$colorE $end);
+    background:-webkit-linear-gradient($point,$colorS $start,$colorE $end);
+    background:linear-gradient($point,$colorS $start,$colorE $end);
+}
+
+#cloud{margin:120px auto 20px; position:relative;width:330px;height:120px;background:#f2f9fe;@include backgroud-linear-gradient(#f2f9f3,#d6f0fd,top,5%,100%);border-radius:100px;}
