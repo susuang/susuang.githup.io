@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/cloud.css">
     <title>登录页面</title>
 </head>
-<body onLoad="showCloud();">
+<body>
     <div id="clouds"></div>
     <div id="sun">
         <div id="rings">
@@ -21,5 +21,24 @@
         </div>
     </div>
     <script type="text/javascript" src="./js/cloud.js"></script>
+    <script type="text/javascript">
+        window.onload =function(){
+            var cloudS = new Cloud({
+                size:150,
+                site:170
+            });
+            cloudS.init();
+            setInterval(function(){
+                var randomNum = Math.random()*5;
+                var site = 32 * parseInt(randomNum);
+                var size = 30 * Math.ceil(randomNum);
+                var cloud = new Cloud({
+                    size:size,
+                    site:site
+                });
+                cloud.init();
+            },3000);
+        };
+    </script>
 </body>
 </html>
