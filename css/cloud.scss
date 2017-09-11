@@ -1,14 +1,77 @@
 $white : #fff;
 $blue1 : #f2f9fe;
 *{margin:0;padding:0;}
-body{background:$white}
+body{background:#fffce1;overflow:hidden}
 
-@mixin backgroud-linear-gradient($colorS,$colorE,$point,$start,$end){
-    background:-moz-linear-gradient($point,$colorS $start,$colorE $end);
-    background:-ms-linear-gradient($point,$colorS $start,$colorE $end);
-    background:-o-linear-gradient($point,$colorS $start,$colorE $end);
-    background:-webkit-linear-gradient($point,$colorS $start,$colorE $end);
-    background:linear-gradient($point,$colorS $start,$colorE $end);
+@function js($n){
+    @return $n/5
 }
 
-#cloud{margin:120px auto 20px; position:relative;width:330px;height:120px;background:#f2f9fe;@include backgroud-linear-gradient(#f2f9f3,#d6f0fd,top,5%,100%);border-radius:100px;}
+@mixin backgroud-linear-gradient($colorS,$colorE,$point,$start,$end){
+    background:-webkit-linear-gradient($point,$colorS $start,$colorE $end);
+    background:   -moz-linear-gradient($point,$colorS $start,$colorE $end);
+    background:    -ms-linear-gradient($point,$colorS $start,$colorE $end);
+    background:     -o-linear-gradient($point,$colorS $start,$colorE $end);
+    background:        linear-gradient($point,$colorS $start,$colorE $end);
+}
+
+@mixin posiotion($n){
+    position:$n;
+}
+
+//执行动画以及执行时间设定
+@mixin implement($name,$duration,$timing,$count){
+    -webkit-animation:$name $duration $timing $count;
+       -moz-animation:$name $duration $timing $count;
+        -ms-animation:$name $duration $timing $count;
+         -o-animation:$name $duration $timing $count;
+            animation:$name $duration $timing $count;
+}
+
+@mixin keyframes($animationName) { 
+    @-webkit-keyframes #{$animationName} { @content; } 
+       @-moz-keyframes #{$animationName} { @content; } 
+         @-o-keyframes #{$animationName} { @content; } 
+            @keyframes #{$animationName} { @content; } 
+}
+
+/*@include keyframes(move){
+    0%   { left:0 }
+    100% { left:100% }
+}
+
+#clouds{margin-top:50px;position:relative;width:js(350px);height:js(350px);@include implement(move,20s,linear,infinite);z-index:1;}
+
+#cloud{width:js(330px);height:js(120px);background:#f2f9fe;@include backgroud-linear-gradient($blue1,#d6f0fd,top,5%,100%);border-radius:js(100px);
+}
+
+#cloud:before,#cloud:after{
+    content:"";z-index:-1;@include posiotion(absolute);background:$blue1;
+}
+#cloud:before{
+    width:js(180px); height:js(180px); top:js(-90px); right:js(50px); border-radius:js(200px);
+}
+#cloud:after{
+    width:js(100px); height:js(100px); top:js(-50px); left:js(50px); border-radius:js(100px);
+}
+.shadow{ 
+    width:js(320px); @include posiotion(absolute); top:25px; background:#000;box-shadow:0 0 js(50px) js(10px) rgba(0,0,0,0.3);border-radius: 50%; -webkit-border-radius:50%;z-index:-1;
+}*/
+#clouds{position:relative;width:100%;height:200px}
+.cloud{@include posiotion(absolute);width:70px;height:70px;z-index:1;}
+#sun{
+   @include posiotion(fixed); 
+   top:-10px;
+   right:0px;
+   width:200px;
+   height:200px;
+   z-index:-1;
+}
+
+#rings{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255,230,84,0.5);
+    border-radius: 50%;
+}
+

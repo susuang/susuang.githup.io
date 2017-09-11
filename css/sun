@@ -1,0 +1,195 @@
+/* Sun */
+#sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -150px;
+  width: 300px;
+  height: 300px;
+}
+#sun *,
+#sun *:before,
+#sun *:after {
+  position: absolute;
+}
+
+/* Rings */
+#rings {
+  top: 50%;
+  left: 50%;
+    z-index: 1;
+}
+#rings div:before,
+#rings div:after {
+    content: "";
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    background: inherit;    
+}
+#rings div:before {
+  transform: rotate(60deg);
+}
+#rings div:after {
+    transform: rotate(-60deg);
+}
+
+/* Rings rotation & animation */
+#rings div:nth-child(even) {
+  animation: rotateR 12s infinite linear;
+}
+#rings div:nth-child(odd) {
+  animation: rotateL 12s infinite linear;
+  transform: rotate(15deg);
+}
+
+/* Rings each*/
+#rings div:nth-child(1) {
+  animation-duration: 45s;
+    background: rgba(255,230,84,0.5);
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+}
+#rings div:nth-child(2)  {
+  animation-duration: 49s;
+    background: rgba(255,185,6,0.5);
+    width: 190px;
+    height: 190px;
+    margin: -95px 0 0 -95px;
+}
+#rings div:nth-child(3) {
+  animation-duration: 56s;
+    background: rgba(255,130,5,0.5);
+    width: 180px;
+    height: 180px;
+    margin: -90px 0 0 -90px;
+}
+#rings div:nth-child(4) {
+  animation-duration: 93s;
+    background: rgba(255,90,0,0.5);
+    width: 170px;
+    height: 170px;
+    margin: -85px 0 0 -85px;
+}
+
+/* Face
+#face {
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    margin: -75px 0 0 -70px;
+    z-index: 5;
+}
+#face [id^="eye-"] {
+  transform: rotate(-45deg);
+    border-radius: 0 50% 0 50%;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    background: rgb(127,1,11);
+    background: -moz-radial-gradient(center, circle cover, rgba(127,1,11,1) 38%, rgba(255,112,0,1) 41%, rgba(255,112,0,1) 63%, rgba(255,230,84,1) 66%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(38%,rgba(127,1,11,1)), color-stop(41%,rgba(255,112,0,1)), color-stop(63%,rgba(255,112,0,1)), color-stop(66%,rgba(255,230,84,1)));
+    background: -webkit-radial-gradient(center, circle cover, rgba(127,1,11,1) 38%,rgba(255,112,0,1) 41%,rgba(255,112,0,1) 63%,rgba(255,230,84,1) 66%);
+    background: -o-radial-gradient(center, circle cover, rgba(127,1,11,1) 38%,rgba(255,112,0,1) 41%,rgba(255,112,0,1) 63%,rgba(255,230,84,1) 66%);
+    background: -ms-radial-gradient(center, circle cover, rgba(127,1,11,1) 38%,rgba(255,112,0,1) 41%,rgba(255,112,0,1) 63%,rgba(255,230,84,1) 66%);
+    background: radial-gradient(circle at center, rgba(127,1,11,1) 38%,rgba(255,112,0,1) 41%,rgba(255,112,0,1) 63%,rgba(255,230,84,1) 66%);
+}
+#face #eye-1 {
+    left: 50%;
+    margin-left: -45px;
+}
+#face #eye-2 {
+    right: 50%;
+    margin-right: -45px;
+}
+#face #nose {
+    width: 6px;
+    height: 58px;
+    border-radius: 3px 3px 2px 2px;
+    top: 48px;
+    left: 50%;
+    margin-left: -3px;
+    background: rgba(127,1,11,1);
+}
+#face #mouth {
+    width: 80px;
+    height: 40px;
+    border-radius: 0 0 40px 40px;
+    top: 90px;
+    left: 50%;
+    margin-left: -40px;
+    border: 2px solid rgba(127,1,11,1);
+    border-top: 0;
+}
+#face #mouth:before,
+#face #mouth:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: rgba(255,130,5,1);
+    border-radius: 50%;
+    top: -12px;
+}
+#face #mouth:before {
+    left: -12px;
+}
+#face #mouth:after {
+    right: -12px;
+} */
+/* Animations */
+@-webkit-keyframes rotateR {
+    from { -webkit-transform: rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes rotateR {
+    from { -moz-transform: rotate(0deg); }
+    to   { -moz-transform: rotate(360deg); }
+}
+@-ms-keyframes rotateR {
+    from { -ms-transform: rotate(0deg); }
+    to   { -ms-transform: rotate(360deg); }
+}
+@-o-keyframes rotateR {
+    from { -o-transform: rotate(0deg); }
+    to   { -o-transform: rotate(360deg); }
+}
+@keyframes rotateR {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotateL {
+    from { -webkit-transform: rotate(360deg); }
+    to   { -webkit-transform: rotate(0deg); }
+}
+@-moz-keyframes rotateL {
+    from { -moz-transform: rotate(360deg); }
+    to   { -moz-transform: rotate(0deg); }
+}
+@-ms-keyframes rotateL {
+    from { -ms-transform: rotate(360deg); }
+    to   { -ms-transform: rotate(0deg); }
+}
+@-o-keyframes rotateL {
+    from { -o-transform: rotate(360deg); }
+    to   { -o-transform: rotate(0deg); }
+}
+@keyframes rotateL {
+    from { transform: rotate(360deg); }
+    to   { transform: rotate(0deg); }
+}
+
+
+
+/* Layout */
+body {
+    background: #fffce1;
+}
+body, html {
+   height: 100%;
+}
