@@ -1,0 +1,32 @@
+$color:#000;
+$color-one:#111;
+$color-two:#222;
+@mixin radial-gradient($colorS,$colorE) { 
+    background:-webkit-radial-gradient($colorS,$colorE); 
+    background:        radial-gradient($colorS,$colorE);  
+}
+
+html,body{
+    height:100%;
+}
+body{
+    overflow:hidden;
+    background:$color-one;
+    @include radial-gradient($color-two,$color);
+}
+canvas{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    max-width:100%;
+    max-height:100%;
+    background:$color;
+    box-shadow:
+    0 0 0 10px #222,
+    0 30px 30px -20px #000
+  ;
+}
+
