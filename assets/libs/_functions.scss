@@ -1,0 +1,12 @@
+// Get a value from map
+  /// Gets a misc value.
+  /// param {string} keys.
+  /// return {string} value.
+    @function _misc($keys...) {
+      @return val($misc, $keys...);
+    }
+
+  /// Gets a palette value.
+    @function _palette($keys...) {
+      @return val($palette, $keys...);
+    } 

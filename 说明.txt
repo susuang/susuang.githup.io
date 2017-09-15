@@ -1,0 +1,55 @@
+一、编码规范
+    1、用两个空格来代替制表符（tab）这是唯一能保证在所有环境下获得一致展现的方法。
+    2、为选择器分组时，将单独的选择器单独放在一行。
+    3、为了代码的易读性，在每个声明块的左花括号前添加一个空格。声明块的右花括号应当单独成行。
+    4、每条声明语句的 : 后应该插入一个空格。
+    5、为了获得更准确的错误报告，每条声明都应该独占一行。
+    6、所有声明语句都应当以分号结尾。最后一条声明语句后面的分号是可选的，但是，如果省略这个分号，你的代码可能更易出错。
+    7、对于以逗号分隔的属性值，每个逗号后面都应该插入一个空格（例如，box-shadow）。不要在 rgb()、rgba()、hsl()、hsla() 或 rect() 值的内部的逗号后面插入空格。这样利于从多个属性值（既加逗号也加空格）中区分多个颜色值（只加逗号，不加空格）。
+    8、对于属性值或颜色参数，省略小于 1 的小数前面的 0 （例如，.5 代替 0.5；-.5px 代替 -0.5px）。
+    8、十六进制值应该全部小写，例如，#fff。在扫描文档时，小写字符易于分辨，因为他们的形式更易于区分。尽量使用简写形式的十六进制值，例如，用 #fff 代替 #ffffff。
+    9、为选择器中的属性添加双引号，例如，input[type="text"]。只有在某些情况下是可选的，但是，为了代码的一致性，建议都加上双引号。
+    10、避免为 0 值指定单位，例如，用 margin: 0; 代替 margin: 0px;。
+
+二、声明顺序
+    1、Positioning
+    2、Box model
+    3、Typographic
+    4、Visual
+    .declaration-order {
+      /* Positioning */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+
+      /* Box-model */
+      display: block;
+      float: right;
+      width: 100px;
+      height: 100px;
+
+      /* Typography */
+      font: normal 13px "Helvetica Neue", sans-serif;
+      line-height: 1.5;
+      color: #333;
+      text-align: center;
+
+      /* Visual */
+      background-color: #f5f5f5;
+      border: 1px solid #e5e5e5;
+      border-radius: 3px;
+
+      /* Misc */
+      opacity: 1;
+    }
+
+三、不要使用@import，与 <link> 标签相比，@import 指令要慢很多，不光增加了额外的请求次数，还会导致不可预料的问题。替代办法有以下几种：
+    1、使用多个 <link> 元素
+    2、通过 Sass 或 Less 类似的 CSS 预处理器将多个 CSS 文件编译为一个文件
+    3、通过 Rails、Jekyll 或其他系统中提供过 CSS 文件合并功能
+
+四、媒体查询的位置
+    将媒体查询放在尽可能相关规则的附近。不要将他们打包放在一个单一样式文件中或者放在文档底部。如果你把他们分开了，将来只会被大家遗忘。下面给出一个典型的实例。

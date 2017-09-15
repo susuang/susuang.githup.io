@@ -1,0 +1,91 @@
+// Vars.
+
+  /// Vendor prefixs.
+  /// @var {list}
+  $vendor-prefixes: (
+    '-moz-',
+    '-webkit-',
+    '-ms-',
+    ''
+  );
+
+  ///Properties that should be added prefixs.
+  /// @var {list}
+  $vendor-properties: (
+    'flex',
+    'justify-content'
+  );
+
+  ///Values that should be added prefix
+  /// @var {list}
+  $vendor-values: (
+    'flex'
+  );
+
+//Functions.
+  /// Replace a substring that it is prefix.
+  /// @param {string} $string.
+  /// @return {string} a string that has correct prefix.
+  @function str-replace-all($string, $search, $replace:''){
+    @if $search == str-slice($string, 1, str-length($search)) {
+      $value: str-insert(str-slice($string, (str-length($search))+1), $replace, 1);
+      @return $value;
+    } 
+    @else {
+      @return $string;
+    } 
+  }
+
+  /// Get a value from a map.
+  /// @param {map} $map.
+  /// @param {string} $keys Key(s).
+  /// @return {string} value/key of value.
+  @function val($map, $keys...) { 
+
+    @if nth($keys, 1) == null {
+      $keys: remove-nth($keys, 1);
+    } 
+
+    @each $key in $keys {
+      $map: map-get($map, $key);
+    }
+
+    @return $map;
+  } 
+
+
+//Mixins.
+  /// Vendor function that prefix to property.
+  /// @param {string} $property.
+  /// @param {mixed}  $value String.
+  @mixin vendor($property, $value){
+
+    //Determine whether the property shoule add perfix.
+      $perfixProperty: index($vendor-properties, $property);
+
+    //Determine whether the value shoule add perfix.
+      $perfixValues: false;
+      @each $v in $vendor-values {
+        @if $value == $v {
+          $value: str-insert($value,'-prefix-',1);
+          $perfixValues: true;
+        } 
+      } 
+
+    //prefix property
+      @if $perfixProperty {
+        @each $perfix in $vendor-prefixes {
+          #{$perfix}#{$property}: #{str-replace-all($value, '-prefix-', $perfix)}; 
+        } 
+      } 
+    //prefix only value
+      @elseif perfixValues {
+        @each $perfix in $vendor-prefixes {
+          #{$property}: #{str-replace-all($value, '-prefix-', $perfix)};
+        }
+      }
+    //it only normal property
+      @else {
+          #{$property}: #{$value};
+      }  
+  }

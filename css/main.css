@@ -1,0 +1,15 @@
+/* Header */
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between; }
+
+/*# sourceMappingURL=main.css.map */
