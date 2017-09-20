@@ -2,7 +2,20 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/skel';
+@import "compass/css3";
+@import 'font-awesome.min.css';
+// Basic
+
+  @import 'base/layout';
+
+  @include base-layout((
+    reset: 'full'
+  ));
 
 // Layout
   
+  @import 'layout/wrapper'; 
   @import 'layout/header';
+  @import 'layout/main';
+  @import 'layout/footer';
+

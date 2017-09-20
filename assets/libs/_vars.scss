@@ -5,5 +5,26 @@
 
 //Palette
   $palette: (
-    bg: #fff
+    bg:       #fff,
+    bg-alt:   #f4f4f4,
+    border:   rgba(160,160,160,0.3)
+  );
+
+// Font.
+  $font: (
+    family:             ('Source Sans Pro', Helvetica, sans-serif),
+    family-fixed:       ('Courier New', monospace),
+    family-heading:     ('Raleway', Helvetica, sans-serif),
+    weight:                   400,
+    weight-bold:              700,
+    weight-heading:           400,
+    weight-heading-bold:      800,
+    weight-heading-extrabold: 900,
+    kerning-heading:          0.25rem
+  );
+
+  // Duration.
+  $duration: (
+    menu:           0.5s,
+    transition:         0.2s
   );

@@ -1,9 +1,63 @@
 /* Header */
+#header {
+  @include vendor('display', 'flex');
+  @include vendor('justify-content', 'space-between');
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: _misc(z-index-base);
 
-  #header {
-    position: fixed;
-    top: 0;
-    z-index: _misc(z-index-base); 
-    @include vendor('display', 'flex');
-    @include vendor('justify-content', 'space-between');
+  width:100%;
+  height:2.8rem;
+
+  line-height:2.8rem;
+  border-bottom: solid 1px _palette(border);
+  background: _palette(bg);
+  letter-spacing: .1rem;
+
+  h1 {
+    padding: 0 0 0 1.2rem;
+    height: inherit;
+    line-height: inherit;
+    font-size: 0.7rem;
+    letter-spacing: .2rem;
   }
+  a {
+    color: inherit;
+  } 
+  ul li {
+    display: inline-block;
+  }
+  .links {
+    @include vendor('flex', '1');
+    margin: 0 0 0 1.2rem;
+    padding: 0 0 0 1.2rem;
+    height: inherit;
+    line-height: inherit;
+    border-left: solid 1px _palette(border);
+
+    ul {
+      li {
+        margin: 0 0 0 0.7rem;
+        padding: 0 0 0 0.7rem;
+        line-height: 1;
+        border-left: solid 1px _palette(border);
+
+        &:first-child {
+          margin-left: 0;
+          padding-left: 0;
+          border-left: 0;
+        } 
+
+        a {
+          border-bottom: 0;
+          font-family: _font(family-heading);
+          font-size: 0.7em;
+          font-weight: _font(weight-heading);
+          text-transform: uppercase;
+        }
+      } 
+    } 
+  }
+} 
+

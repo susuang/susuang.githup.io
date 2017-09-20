@@ -1,0 +1,94 @@
+$r:80px;
+div{
+  width: 2*$r;
+  height: 2*$r;
+  background:#333;
+  float: left;
+  margin: 10px; 
+}
+@for $i from 1 through 20{
+  div:nth-child(#{$i}){
+    -webkit-clip-path:polygon(
+      $r *cos(2 * pi() /$i *1) +$r  $r *sin(2 * pi() /$i *1) +$r,
+      $r *cos(2 * pi() /$i *2) +$r  $r *sin(2 * pi() /$i *2) +$r,
+      $r *cos(2 * pi() /$i *3) +$r  $r *sin(2 * pi() /$i *3) +$r,
+      $r *cos(2 * pi() /$i *4) +$r  $r *sin(2 * pi() /$i *4) +$r,
+      $r *cos(2 * pi() /$i *5) +$r  $r *sin(2 * pi() /$i *5) +$r,
+      $r *cos(2 * pi() /$i *6) +$r  $r *sin(2 * pi() /$i *6) +$r,
+      $r *cos(2 * pi() /$i *7) +$r  $r *sin(2 * pi() /$i *7) +$r,
+      $r *cos(2 * pi() /$i *8) +$r  $r *sin(2 * pi() /$i *8) +$r,
+      $r *cos(2 * pi() /$i *9) +$r  $r *sin(2 * pi() /$i *9) +$r,
+      $r *cos(2 * pi() /$i *10) +$r  $r *sin(2 * pi() /$i *10) +$r,
+      $r *cos(2 * pi() /$i *11) +$r  $r *sin(2 * pi() /$i *11) +$r,
+      $r *cos(2 * pi() /$i *12) +$r  $r *sin(2 * pi() /$i *12) +$r,
+      $r *cos(2 * pi() /$i *13) +$r  $r *sin(2 * pi() /$i *13) +$r,
+      $r *cos(2 * pi() /$i *14) +$r  $r *sin(2 * pi() /$i *14) +$r,
+      $r *cos(2 * pi() /$i *15) +$r  $r *sin(2 * pi() /$i *15) +$r,
+      $r *cos(2 * pi() /$i *16) +$r  $r *sin(2 * pi() /$i *16) +$r,
+      $r *cos(2 * pi() /$i *17) +$r  $r *sin(2 * pi() /$i *17) +$r,
+      $r *cos(2 * pi() /$i *18) +$r  $r *sin(2 * pi() /$i *18) +$r,
+      $r *cos(2 * pi() /$i *19) +$r  $r *sin(2 * pi() /$i *19) +$r,
+      $r *cos(2 * pi() /$i *20) +$r  $r *sin(2 * pi() /$i *20) +$r
+    );
+  }
+}
+
+.wrap {
+  display: inline-block;
+  position: relative;
+  margin: 0 4px 3em;
+  width: 300px; height: 300px;
+  box-shadow: 0 0 2px 2px;
+  
+  & > * {
+    position: absolute;
+    top: 0; left: 0;
+    width: inherit; height: inherit;
+  }
+  
+  &:nth-child(2) .clip-me {
+    clip-path: polygon(
+      120px 90px, 30px 150px, 120px 210px, 
+      120px 90px, 
+      180px 90px, 270px 150px, 180px 210px, 
+      180px 90px
+    );
+  }
+  
+  &:nth-child(n + 3) .clip-me {
+    clip-path: url(#cp);
+  }
+  
+  &:after {
+    position: absolute;
+    top: 100%;
+    padding: .5em 0;
+    font: 1em trebuchet ms, verdana, sans-serif;
+    content: attr(data-descr);
+  }
+}
+
+div {
+  &.no-clip, &.clip-me {
+    background: #222
+  }
+}
+
+rect { fill: #222 }
+
+.drawing {
+  fill: rgba(#be4c39, .01);
+  stroke: #da8817;
+  stroke-width: 4;
+  stroke-dasharray: 795;
+  stroke-dashoffset: 795;
+  animation: ani 4s linear infinite;
+}
+
+@keyframes ani {
+  79% { fill: rgba(#be4c39, .01); }
+  80%, 100% {
+    fill: rgba(#be4c39, .35);
+    stroke-dashoffset: 0;
+  }
+}

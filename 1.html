@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/clip.css">
+</head>
+<body>
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+
+<section class='wrap' data-descr='initial element + how path is drawn'>
+ <div class='no-clip'></div>
+ <svg viewbox='0 0 300 300'>
+    <defs>
+      <clipPath id='cp' clipPathUnits='objectBoundingBox'>
+        <polygon points='.4,.3 .1,.5 .4,.7 
+                         .4,.3 
+                         .6,.3 .9,.5 .6,.7
+                         .6,.3'/>
+      </clipPath>
+    </defs>
+    
+    <polygon points='120,90 30,150 120,210 
+                     120,90 
+                     180,90 270,150 180,210 
+                     180,90' 
+             class='drawing'/>
+  </svg>
+</section>
+
+<section class='wrap' data-descr='clip: use polygon() function (WebKit only)'>
+ <div class='clip-me'></div>
+</section>
+<script type="text/javascript">
+/*第一种方法：可以将多个全局变量转换为一个全局变
+量，如何用这个全局变量调用其他变量*/
+var n = {a:''};
+function b(){
+  n.a = 10;
+}
+//利用prototype属性，类的思想。封装js
+var X = function(config){};
+X.prototype.b = function(){
+  var a  = 11;
+  return this.a = a;
+}
+
+Date.prototype.Format = function (fmt) { //author: meizz 
+    var o = {
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "h+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+
+window.onload=function(){
+  var num = 12;//总共的模块数
+  for(var i = 0 ;i<num;i++){
+    var iNum = parseInt(i/4)+1;
+    var x = i % 4;
+    if(!(iNum%2)){
+      if(!(x%2)){
+        console.info('白色');
+      }else{
+        console.info('黄色');
+      }
+    }else{
+      if(!(x%2)){
+        console.info('黄色');
+      }else{
+        console.info('白色');
+      }
+    }
+  }
+
+  //时间添加http://www.cnblogs.com/zhangpengshou/archive/2012/07/19/2599053.html；
+  //http://www.cnblogs.com/carekee/articles/1678041.html
+  //http://www.cnblogs.com/carekee/articles/1678041.html
+  var myDate  = new Date();
+  //天
+  myDate.setDate(myDate.getDate()+30);
+  //时
+  myDate.setHours(myDate.getHours()+24);
+  //分
+  myDate.setMinutes(myDate.getMinutes()+20);
+  myDate = myDate.Format("yyyy-MM-dd hh:mm:ss");
+  console.info(myDate);
+}
+</script>
+</body>
+</html>

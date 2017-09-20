@@ -1,8 +1,69 @@
+@import url(font-awesome.min.css);
+/* basic */
+/* line 23, ../assets/base/_layout.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* line 23, ../assets/base/_layout.scss */
+html {
+  font-size: 20px;
+}
+
+/* line 23, ../assets/base/_layout.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 23, ../assets/base/_layout.scss */
+body {
+  line-height: 1;
+  background: #f4f4f4;
+}
+
+/* line 23, ../assets/base/_layout.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 23, ../assets/base/_layout.scss */
+li, a {
+  text-decoration: none;
+}
+
+/* line 23, ../assets/base/_layout.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 23, ../assets/base/_layout.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 23, ../assets/base/_layout.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Wrapper */
+/* line 4, ../assets/layout/_wrapper.scss */
+#wrapper {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+}
+
 /* Header */
+/* line 2, ../assets/layout/_header.scss */
 #header {
-  position: fixed;
-  top: 0;
-  z-index: 10000;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -10,6 +71,155 @@
   -moz-justify-content: space-between;
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+  background: #fff;
+  letter-spacing: .1rem;
+}
+/* line 18, ../assets/layout/_header.scss */
+#header h1 {
+  padding: 0 0 0 1.2rem;
+  height: inherit;
+  line-height: inherit;
+  font-size: 0.7rem;
+  letter-spacing: .2rem;
+}
+/* line 25, ../assets/layout/_header.scss */
+#header a {
+  color: inherit;
+}
+/* line 28, ../assets/layout/_header.scss */
+#header ul li {
+  display: inline-block;
+}
+/* line 31, ../assets/layout/_header.scss */
+#header .links {
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 0 0 1.2rem;
+  padding: 0 0 0 1.2rem;
+  height: inherit;
+  line-height: inherit;
+  border-left: solid 1px rgba(160, 160, 160, 0.3);
+}
+/* line 40, ../assets/layout/_header.scss */
+#header .links ul li {
+  margin: 0 0 0 0.7rem;
+  padding: 0 0 0 0.7rem;
+  line-height: 1;
+  border-left: solid 1px rgba(160, 160, 160, 0.3);
+}
+/* line 46, ../assets/layout/_header.scss */
+#header .links ul li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+}
+/* line 52, ../assets/layout/_header.scss */
+#header .links ul li a {
+  border-bottom: 0;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
 
-/*# sourceMappingURL=main.css.map */
+/* Main */
+/* line 2, ../assets/layout/_main.scss */
+#main {
+  overflow: hidden;
+  padding-top: 2rem;
+  width: 100%;
+  font-size: 0.7rem;
+}
+/* line 9, ../assets/layout/_main.scss */
+#main #message .diamond {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  padding-top: 3rem;
+}
+/* line 15, ../assets/layout/_main.scss */
+#main #message .diamond img {
+  width: 3rem;
+  max-height: 100%;
+  -moz-clip-path: polygon(50% 0%, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0% 30%);
+  -webkit-clip-path: polygon(50% 0%, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0% 30%);
+  -ms-clip-path: polygon(50% 0%, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(50% 0%, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0% 30%);
+}
+/* line 23, ../assets/layout/_main.scss */
+#main .title h1 {
+  padding: 1.2rem 0 .5rem 0;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: .3rem;
+}
+/* line 29, ../assets/layout/_main.scss */
+#main .title h3 {
+  padding: .5rem 0;
+  font-size: .95rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+}
+/* line 35, ../assets/layout/_main.scss */
+#main .title span {
+  display: inline-block;
+  padding: .5rem .4rem .2rem .4rem;
+  font-size: .65rem;
+  letter-spacing: .2rem;
+}
+/* line 42, ../assets/layout/_main.scss */
+#main #stage {
+  margin: 2rem auto;
+  width: 80%;
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  background: #fff;
+}
+/* line 48, ../assets/layout/_main.scss */
+#main #stage #animalchanger {
+  height: 20rem;
+}
+/* line 50, ../assets/layout/_main.scss */
+#main #stage #animalchanger .butterfly {
+  /* -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%); */
+  width: auto;
+  height: inherit;
+  position: relative;
+}
+/* line 55, ../assets/layout/_main.scss */
+#main #stage #animalchanger .butterfly:nth-child(1) .shard {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  -webkit-clip-path: polygon(0% 0%, 25% 50%, 50% 0%);
+  background: red;
+}
+/* line 62, ../assets/layout/_main.scss */
+#main #stage #animalchanger .butterfly:nth-child(1) .shard {
+  position: absolute;
+  -webkit-clip-path: polygon(50% 0%, 25% 50%, 100% 0%);
+  background: blue;
+}
+
+/* Footer */
+/* line 2, ../assets/layout/_footer.scss */
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
