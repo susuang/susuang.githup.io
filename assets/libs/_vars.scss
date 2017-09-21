@@ -7,14 +7,32 @@
   $palette: (
     bg:       #fff,
     bg-alt:   #f4f4f4,
+    font-color:     #000,
     border:   rgba(160,160,160,0.3)
   );
 
 // Font.
   $font: (
-    family:             ('Source Sans Pro', Helvetica, sans-serif),
-    family-fixed:       ('Courier New', monospace),
-    family-heading:     ('Raleway', Helvetica, sans-serif),
+    family-g-s:          (Georgia, serif),
+    family-pbp-s:        ("Palatino Linotype", "Book Antiqua", Palatino, serif),
+    family-tnr-s:        ("Times New Roman", Times, serif),
+
+    family-ah-ss:        (Arial, Helvetica, sans-serif),
+    family-ag-ss:        (Arial Black, Gadget, sans-serif),
+    family-cc-ss:        ("Comic Sans MS", cursive, sans-serif),
+    family-ic-ss:        (Impact, Charcoal, sans-serif),
+    family-ll-ss:        ("Lucida Sans Unicode", "Lucida Grande", sans-serif),
+    family-tg-ss:        (Tahoma, Geneva, sans-serif),
+    family-th-ss:        ("Trebuchet MS", Helvetica, sans-serif),
+    family-vg-ss:        (Verdana, Geneva, sans-serif),
+    family-r-ss:         ('Raleway', Helvetica, sans-serif),
+
+    family-cc-m:         ("Courier New", Courier, monospace),
+    family-lm-m:         ("Lucida Console", Monaco, monospace),
+    
+    family-chinese:      ("微软雅黑","黑体","宋体"),
+
+    
     weight:                   400,
     weight-bold:              700,
     weight-heading:           400,

@@ -1,73 +1,48 @@
 /* Main */
 #main {
-  font-size: 0.7rem;
-  position: relative;
-  top: 2.8rem;
+  @include vendor('display', 'flex');
+  flex-direction: column;
+  margin-top: 2.8rem;
   width: 100%;
-  #message {
-    position: absolute;
-    .diamond {
-      display: inline-block;
-      overflow: hidden;
-      padding-top: 2rem;
+  
+  font-size: .7rem;
+  letter-spacing: .1rem;
+  text-align: center;
 
-      img {
-        width: 3rem;
-        max-height: 100%;
-        @include vendor('clip-path','polygon(50% 0%, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0% 30%)');
-      }
-    } 
+  .logo {
+    display: inline-block;
+    padding: 1.2rem;
+    img {
+      width: 3rem;
+      max-height: 100%;
+      @include vendor('clip-path','polygon(50% 0%, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0% 30%)');
+    }
   }
+
   .title {
     h1 {
-      padding: 1.2rem 0 .5rem 0;
-      font-family: _font(family-heading);
+      padding: .5rem 0;
       font-size: 1.2rem;
-      letter-spacing: .3rem;
+      font-family: _font(family-cc-ss);
+      font-weight: _font(weight-bold);
     }
     h3 {
-      padding: .5rem 0;
-      font-size: .95rem;
+      padding: .2rem 0;
+      font-size: .8rem;
       font-weight: _font(weight);
-      letter-spacing: .2rem;
     } 
     span {
       display: inline-block;
-      padding: .5rem .4rem .2rem .4rem;
-      font-size: .65rem;
-      letter-spacing: .2rem;
-    }  
-  }
+      padding: 0 .8rem 2rem .8rem;
+    }
+  } 
 
   #stage {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    @include vendor('transform', 'translate(-50%, 50%)');
+    width:100%;
+    background: _palette('bg');
     border: solid 1px _palette(border);
-    background: _palette(bg);
+  } 
 
-    .shard-wraps, .shard-wrap{
-      
-      width: 100%;
-      height: 100%;
-    }
-    .shard-wrap {
-      z-index: 2;
-      position: absolute;
-      .shard {
-        width: 100%;
-        height: 100%;
-
-        &::before {
-          content: '';
-          display: block;
-          height: 100%;
-        } 
-      } 
-    }
-  }  
-  
 } 
 /* animal:vaquita */
 #animalchanger.vaquita {

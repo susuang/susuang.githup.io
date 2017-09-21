@@ -3,17 +3,11 @@
 @import 'libs/mixins';
 @import 'libs/skel';
 @import "compass/css3";
+@import 'compass/reset';
 @import 'font-awesome.min.css';
-// Basic
-
-  @import 'base/layout';
-
-  @include base-layout((
-    reset: 'full'
-  ));
 
 // Layout
-  
+  @import 'base/layout';
   @import 'layout/wrapper'; 
   @import 'layout/header';
   @import 'layout/main';
