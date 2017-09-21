@@ -43,19 +43,18 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    @include vendor('transform', 'translate(-50%, 50%)');
     border: solid 1px _palette(border);
     background: _palette(bg);
 
     .shard-wraps, .shard-wrap{
-      position: absolute;
-      top: 0 ;
-      left: 0;
+      
       width: 100%;
       height: 100%;
     }
     .shard-wrap {
       z-index: 2;
-
+      position: absolute;
       .shard {
         width: 100%;
         height: 100%;

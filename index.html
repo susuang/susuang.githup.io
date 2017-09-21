@@ -154,7 +154,9 @@
 
         let stageHeight = bodyHeight - (header.offsetHeight + footer.offsetHeight + message.offsetHeight);
         let width = stageHeight * 1.4;
-        stage.style.cssText = "width:" +width+ "px;height:"+stageHeight+"px;margin-left:" + (-width/2) + "px;margin-top:"+stageHeight/2+"px;";
+        stage.style.cssText = "width:" +width+ "px;height:"+stageHeight+"px;";
+
+
         console.info(bodyHeight);
         console.info(header.offsetHeight);
         console.info(footer.offsetHeight);
