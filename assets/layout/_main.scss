@@ -41,6 +41,12 @@
     width:100%;
     background: _palette('bg');
     border: solid 1px _palette(border);
+
+    #animalchanger .shard-wraps{
+      position: relative;
+      width: 100%;
+      height: 100%;
+    } 
   } 
 
 } 

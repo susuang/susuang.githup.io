@@ -2,10 +2,10 @@
 <html>
 <head>
   <title></title>
-  <link rel="stylesheet" type="text/css" href="css/clip.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/clip.css"> -->
 </head>
 <body>
-<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+<!-- <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
 
 <section class='wrap' data-descr='initial element + how path is drawn'>
  <div class='no-clip'></div>
@@ -26,11 +26,29 @@
              class='drawing'/>
   </svg>
 </section>
-
 <section class='wrap' data-descr='clip: use polygon() function (WebKit only)'>
  <div class='clip-me'></div>
-</section>
+</section> -->
+<div class="two">1</div>
+  <div class="three">2</div>
+  <div class="three">3</div>
+  <div class="four">3</div>
+  <div class="two">4</div>  
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
+$(function(){
+  $('.two').eq(0).nextUntil('.two').each(function(){
+    if($(this).hasClass('three')){
+      $(this).css('color','red');
+    }
+  });
+  var m = '1-2-3';
+  var mArry = m.split('-');
+  console.info(mArry);
+});
+
+
 /*第一种方法：可以将多个全局变量转换为一个全局变
 量，如何用这个全局变量调用其他变量*/
 var n = {a:''};
