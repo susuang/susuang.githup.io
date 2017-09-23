@@ -4,11 +4,10 @@
   <head>
     <title>The Home of Susuang</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, inital-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <!-- 支持IE默认为ie的最高版本 -->
     <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
     <link rel="stylesheet" href="css/main.css">
-
   </head>
 
   <body onload="stageHeight();">
@@ -135,23 +134,30 @@
           </div>
         </div>
       </div>
-      <div id="footer"></div>
+      <div id="footer"><center><div>123</div></center></div>
     </div>
     <script type="text/javascript">
       function stageHeight() {
         let bodyHeight = document.body.clientHeight;
         let header = document.getElementById('header');
+        let footer = document.getElementById('footer');
         let message = document.getElementById('container-header');
         let stage = document.getElementById('stage');
 
-        let stageHeight = bodyHeight - (header.offsetHeight + message.offsetHeight+100);
+        let stageHeight = bodyHeight - (header.offsetHeight + message.offsetHeight + footer.offsetHeight);
         stage.style.height = stageHeight + "px";
-        
 
-        console.info(bodyHeight);
-        console.info(header.offsetHeight);
-        console.info(message.offsetHeight);
-        console.info(stageHeight);
+        let stageWidth = stage.offsetWidth;
+        let animalchanger = document.getElementById('animalchanger');
+        console.info(stageWidth);
+        if(stageWidth > stageHeight) {
+          console.info(123);
+          animalchanger.style.height = stageHeight + "px";
+          animalchanger.style.width = stageHeight * 1.4 + "px";
+        }else {
+          animalchanger.style.width = stageWidth + "px";
+          animalchanger.style.height = stageHeight * (5/7) + "px";
+        }
       } 
     </script>
   </body>

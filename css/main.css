@@ -221,310 +221,333 @@ body {
   background: #fff;
   border: solid 1px rgba(160, 160, 160, 0.3);
 }
+/* line 45, ../assets/layout/_main.scss */
+#main #stage #animalchanger {
+  margin: 0 auto;
+  vertical-align: middle;
+}
+/* line 49, ../assets/layout/_main.scss */
+#main #stage #animalchanger .shard-wraps, #main #stage #animalchanger .shard-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 54, ../assets/layout/_main.scss */
+#main #stage #animalchanger .shard-wrap {
+  z-index: 2;
+  position: absolute;
+}
+/* line 57, ../assets/layout/_main.scss */
+#main #stage #animalchanger .shard-wrap .shard {
+  width: 100%;
+  height: 100%;
+}
+/* line 61, ../assets/layout/_main.scss */
+#main #stage #animalchanger .shard-wrap .shard::before {
+  content: '';
+  display: block;
+  height: 100%;
+}
 
 /* animal:vaquita */
-/* line 49, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps {
-  /* background-color: rgb(100, 214, 226); */
-}
-/* line 53, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(1) .shard {
+/* line 76, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(1) .shard {
   -webkit-clip-path: polygon(9.38% 59.35%, 13.4% 58.95%, 9.28% 61.08%);
   background-color: #334543;
 }
-/* line 59, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(2) .shard {
+/* line 82, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(2) .shard {
   -webkit-clip-path: polygon(9.28% 61.08%, 13.25% 58.96%, 11.7% 62.35%);
   background-color: #111619;
 }
-/* line 65, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(3) .shard {
+/* line 88, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(3) .shard {
   -webkit-clip-path: polygon(9.389% 59.352%, 14.368% 45.048%, 17.882% 45.693%);
   background-color: #3c4650;
 }
-/* line 71, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(4) .shard {
+/* line 94, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(4) .shard {
   -webkit-clip-path: polygon(9.389% 59.352%, 17.882% 45.693%, 14.684% 54.94%);
   background-color: #0F1622;
 }
-/* line 77, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(5) .shard {
+/* line 100, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(5) .shard {
   -webkit-clip-path: polygon(9.389% 59.352%, 14.684% 54.94%, 13.25% 58.958%);
   background-color: #d9eadf;
 }
-/* line 83, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(6) .shard {
+/* line 106, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(6) .shard {
   -webkit-clip-path: polygon(11.705% 62.346%, 13.25% 58.958%, 32.112% 61.716%);
   background-color: #d9ebeb;
 }
-/* line 89, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(7) .shard {
+/* line 112, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(7) .shard {
   -webkit-clip-path: polygon(13.25% 58.958%, 14.684% 54.94%, 17.827% 55.964%);
   background-color: #333c40;
 }
-/* line 95, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(8) .shard {
+/* line 118, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(8) .shard {
   -webkit-clip-path: polygon(13.25% 58.958%, 17.827% 55.964%, 15.676% 59.431%);
   background-color: #1c2529;
 }
-/* line 101, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(9) .shard {
+/* line 124, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(9) .shard {
   -webkit-clip-path: polygon(14.684% 54.94%, 17.882% 45.693%, 17.827% 55.964%);
   background-color: #62827f;
 }
-/* line 107, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(10) .shard {
+/* line 130, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(10) .shard {
   -webkit-clip-path: polygon(15.676% 59.431%, 17.827% 55.964%, 32.112% 61.716%);
   background-color: #bdd0d0;
 }
-/* line 113, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(11) .shard {
+/* line 136, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(11) .shard {
   -webkit-clip-path: polygon(14.368% 45.048%, 41.129% 30.988%, 17.882% 45.693%);
   background-color: #273537;
 }
-/* line 119, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(12) .shard {
+/* line 142, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(12) .shard {
   -webkit-clip-path: polygon(17.882% 45.693%, 41.047% 30.988%, 58.171% 35.479%);
   background-color: #384e4d;
 }
-/* line 125, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(13) .shard {
+/* line 148, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(13) .shard {
   -webkit-clip-path: polygon(17.882% 45.693%, 37.186% 39.103%, 17.827% 55.964%);
   background-color: #486461;
 }
-/* line 131, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(14) .shard {
+/* line 154, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(14) .shard {
   -webkit-clip-path: polygon(17.827% 55.964%, 37.131% 39.103%, 33.711% 48.13%);
   background-color: #62827f;
 }
-/* line 137, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(15) .shard {
+/* line 160, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(15) .shard {
   -webkit-clip-path: polygon(17.827% 55.964%, 33.766% 48.13%, 32.112% 61.716%);
   background-color: #aac7c6;
 }
-/* line 144, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(16) .shard {
+/* line 167, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(16) .shard {
   -webkit-clip-path: polygon(25.99% 61.716%, 32.64% 61.368%, 36.91% 70.146%);
   background-color: #0d1417;
 }
-/* line 150, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(17) .shard {
+/* line 173, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(17) .shard {
   -webkit-clip-path: polygon(33.711% 48.13%, 55.276% 61.952%, 32.195% 61.597%);
   background-color: #d9ebeb;
 }
-/* line 156, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(18) .shard {
+/* line 179, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(18) .shard {
   -webkit-clip-path: polygon(27.107% 55.964%, 39.318% 59.352%, 40.467% 66.772%);
   background-color: #334543;
 }
-/* line 162, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(19) .shard {
+/* line 185, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(19) .shard {
   -webkit-clip-path: polygon(27.107% 55.964%, 40.467% 66.772%, 45.128% 74.085%);
   background-color: #21282f;
 }
-/* line 169, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(20) .shard {
+/* line 192, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(20) .shard {
   -webkit-clip-path: polygon(33.711% 48.13%, 37.076% 39.121%, 59.688% 51.237%);
   background-color: #739998;
 }
-/* line 175, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(21) .shard {
+/* line 198, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(21) .shard {
   -webkit-clip-path: polygon(36.414% 33.588%, 47.582% 21.06%, 47.044% 34.533%);
   background-color: #2d3b3b;
 }
-/* line 181, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(22) .shard {
+/* line 204, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(22) .shard {
   -webkit-clip-path: polygon(33.711% 48.13%, 59.688% 51.237%, 55.276% 61.952%);
   background-color: #d8e2de;
 }
-/* line 187, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(23) .shard {
+/* line 210, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(23) .shard {
   -webkit-clip-path: polygon(37.076% 39.121%, 58.171% 35.479%, 55.3% 40.679%);
   background-color: #415555;
 }
-/* line 193, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(24) .shard {
+/* line 216, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(24) .shard {
   -webkit-clip-path: polygon(37.076% 39.121%, 55.3% 40.442%, 59.688% 51.237%);
   background-color: #486461;
 }
-/* line 199, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(25) .shard {
+/* line 222, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(25) .shard {
   -webkit-clip-path: polygon(55.3% 40.442%, 58.171% 35.479%, 59.688% 51.237%);
   background-color: #384e4d;
 }
-/* line 205, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(26) .shard {
+/* line 228, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(26) .shard {
   -webkit-clip-path: polygon(58.171% 35.479%, 75.108% 48.262%, 59.688% 51.237%);
   background-color: #4b6364;
 }
-/* line 212, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(27) .shard {
+/* line 235, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(27) .shard {
   -webkit-clip-path: polygon(55.276% 61.952%, 59.688% 51.237%, 75.108% 48.262%);
   background-color: #c0dbd3;
 }
-/* line 218, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(28) .shard {
+/* line 241, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(28) .shard {
   -webkit-clip-path: polygon(58.171% 35.479%, 82.907% 41.309%, 75.108% 48.262%);
   background-color: #2d3b3b;
 }
-/* line 224, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(29) .shard {
+/* line 247, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(29) .shard {
   -webkit-clip-path: polygon(78.275% 41.979%, 86.099% 38.183%, 96.64% 38.788%);
   background-color: #365255;
 }
-/* line 230, ../assets/layout/_main.scss */
-#animalchanger.vaquita .shard-wraps .shard-wrap:nth-child(30) .shard {
+/* line 253, ../assets/layout/_main.scss */
+.vaquita .shard-wraps .shard-wrap:nth-child(30) .shard {
   -webkit-clip-path: polygon(78.275% 41.979%, 96.64% 38.788%, 88.644% 43.784%);
   background-color: #678781;
 }
 
-/* line 242, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(1) .shard {
+/* line 265, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(1) .shard {
   -webkit-clip-path: polygon(20.35% 45.429%, 22.8% 35.571%, 28.95% 39.286%);
   background-color: #8F6B4E;
 }
-/* line 248, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(2) .shard {
+/* line 271, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(2) .shard {
   -webkit-clip-path: polygon(20.35% 45.429%, 26.45% 41%, 23.65% 47.429%);
   background-color: #684B2D;
 }
-/* line 254, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(3) .shard {
+/* line 277, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(3) .shard {
   -webkit-clip-path: polygon(22.8% 35.714%, 22.75% 27.857%, 30.05% 29%);
   background-color: #B89076;
 }
-/* line 260, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(4) .shard {
+/* line 283, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(4) .shard {
   -webkit-clip-path: polygon(25.4% 28.357%, 29.7% 28.929%, 22.8% 35.643%);
   background-color: #c6a188;
 }
-/* line 266, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(5) .shard {
+/* line 289, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(5) .shard {
   -webkit-clip-path: polygon(22.8% 35.714%, 30% 28.857%, 27.95% 40.4%);
   background-color: #AA8269;
 }
-/* line 272, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(6) .shard {
+/* line 295, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(6) .shard {
   -webkit-clip-path: polygon(22.85% 29.143%, 19.35% 24.857%, 22.65% 26.286%);
   background-color: #DEC9BF;
 }
-/* line 278, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(7) .shard {
+/* line 301, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(7) .shard {
   -webkit-clip-path: polygon(22.75% 27.857%, 25.85% 25.571%, 30.05% 29.286%);
   background-color: #A2725D;
 }
-/* line 285, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(8) .shard {
+/* line 308, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(8) .shard {
   -webkit-clip-path: polygon(29.85% 29%, 34.35% 26.286%, 32.75% 31.143%);
   background-color: #DEC9BF;
 }
-/* line 291, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(9) .shard {
+/* line 314, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(9) .shard {
   -webkit-clip-path: polygon(23.45% 27.286%, 21.65% 16.143%, 24.95% 26.429%);
   background-color: #634C42;
 }
-/* line 297, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(10) .shard {
+/* line 320, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(10) .shard {
   -webkit-clip-path: polygon(26.05% 25.857%, 30.15% 19.714%, 28.05% 27.571%);
   background-color: #634C42;
 }
-/* line 303, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(11) .shard {
+/* line 326, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(11) .shard {
   -webkit-clip-path: polygon(21.75% 16%, 24.95% 4.429%, 22.25% 17.857%);
   background-color: #312B34;
 }
-/* line 309, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(12) .shard {
+/* line 332, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(12) .shard {
   -webkit-clip-path: polygon(30.05% 19.714%, 34.05% 15.571%, 28.85% 24.429%);
   background-color: #312B34;
 }
-/* line 315, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(13) .shard {
+/* line 338, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(13) .shard {
   -webkit-clip-path: polygon(33.15% 16.571%, 33.15% 4.429%, 33.95% 15.571%);
   background-color: #413430;
 }
-/* line 321, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(14) .shard {
+/* line 344, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(14) .shard {
   -webkit-clip-path: polygon(29.95% 29.143%, 37.15% 42.571%, 27.85% 40%);
   background-color: #A3785C;
 }
-/* line 327, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(15) .shard {
+/* line 350, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(15) .shard {
   -webkit-clip-path: polygon(27.75% 40%, 37.15% 42.429%, 33.8% 53.4%);
   background-color: #835D48;
 }
-/* line 334, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(16) .shard {
+/* line 357, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(16) .shard {
   -webkit-clip-path: polygon(33.45% 35.857%, 52.05% 38.2%, 37.05% 42.714%);
   background-color: #835D48;
 }
-/* line 342, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(17) .shard {
+/* line 365, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(17) .shard {
   -webkit-clip-path: polygon(37.2% 42.1%, 38.85% 58.714%, 33.75% 53.429%);
   background-color: #896444;
 }
-/* line 348, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(18) .shard {
+/* line 371, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(18) .shard {
   -webkit-clip-path: polygon(37.05% 42.429%, 47.85% 60.714%, 38.75% 58.714%);
   background-color: #A3785C;
 }
-/* line 354, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(19) .shard {
+/* line 377, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(19) .shard {
   -webkit-clip-path: polygon(37.05% 42.571%, 52.05% 38.143%, 47.85% 60.714%);
   background-color: #996E50;
 }
-/* line 360, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(20) .shard {
+/* line 383, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(20) .shard {
   -webkit-clip-path: polygon(38.85% 58.571%, 43.45% 59.571%, 36.65% 76.286%);
   background-color: #9E765B;
 }
-/* line 366, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(21) .shard {
+/* line 389, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(21) .shard {
   -webkit-clip-path: polygon(38.55% 71.571%, 41.95% 85.429%, 36.65% 75.714%);
   background-color: #76563A;
 }
-/* line 372, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(22) .shard {
+/* line 395, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(22) .shard {
   -webkit-clip-path: polygon(43.85% 59.571%, 47.85% 60.571%, 46.35% 85.714%);
   background-color: #AC805E;
 }
-/* line 379, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(23) .shard {
+/* line 402, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(23) .shard {
   -webkit-clip-path: polygon(47.75% 60.571%, 52% 38.143%, 61.95% 58.143%);
   background-color: #91694E;
 }
-/* line 385, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(24) .shard {
+/* line 408, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(24) .shard {
   -webkit-clip-path: polygon(51.85% 38.286%, 67.15% 35.714%, 73.65% 47.571%);
   background-color: #906754;
 }
-/* line 391, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(25) .shard {
+/* line 414, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(25) .shard {
   -webkit-clip-path: polygon(52.05% 38.286%, 73.65% 47.429%, 61.85% 58.286%);
   background-color: #A2785C;
 }
-/* line 397, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(26) .shard {
+/* line 420, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(26) .shard {
   -webkit-clip-path: polygon(65.85% 59.143%, 70.85% 52.286%, 73.65% 74.143%);
   background-color: #654E45;
 }
-/* line 403, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(27) .shard {
+/* line 426, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(27) .shard {
   -webkit-clip-path: polygon(61.85% 58.143%, 73.55% 47.429%, 68.35% 59.143%);
   background-color: #AF896D;
 }
-/* line 409, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(28) .shard {
+/* line 432, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(28) .shard {
   -webkit-clip-path: polygon(61.85% 58%, 68.35% 59.143%, 68.35% 72.286%);
   background-color: #BF9C87;
 }
-/* line 416, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(30) .shard {
+/* line 439, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(30) .shard {
   -webkit-clip-path: polygon(66.45% 68.143%, 68.25% 72.143%, 62.05% 86.143%);
   background-color: #7E5C3F;
 }
-/* line 422, ../assets/layout/_main.scss */
-#animalchanger.panda .shard-wraps .shard-wrap:nth-child(29) .shard {
+/* line 445, ../assets/layout/_main.scss */
+.panda .shard-wraps .shard-wrap:nth-child(29) .shard {
   -webkit-clip-path: polygon(71.45% 69.714%, 73.55% 73.857%, 71.35% 85.429%);
   background-color: #B48461;
 }
@@ -532,12 +555,11 @@ body {
 /* Footer */
 /* line 2, ../assets/layout/_footer.scss */
 #footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 2rem;
-  line-height: 2rem;
+  height: 5rem;
   font-size: 0.7rem;
-  text-align: center;
+}
+/* line 7, ../assets/layout/_footer.scss */
+#footer center {
+  padding: .8rem;
 }

@@ -41,19 +41,36 @@
     width:100%;
     background: _palette('bg');
     border: solid 1px _palette(border);
+    
+    #animalchanger {
+      margin: 0 auto;
+      vertical-align: middle;
 
-    #animalchanger .shard-wraps{
-      position: relative;
-      width: 100%;
-      height: 100%;
+      .shard-wraps,.shard-wrap{
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .shard-wrap {
+        z-index: 2;
+        position: absolute;
+        .shard {
+          width: 100%;
+          height: 100%;
+
+          &::before {
+            content: '';
+            display: block;
+            height: 100%;
+          } 
+        } 
+      }
     } 
   } 
-
 } 
 /* animal:vaquita */
-#animalchanger.vaquita {
+.vaquita {
   .shard-wraps {
-    /* background-color: rgb(100, 214, 226); */
     .shard-wrap {
       &:nth-child(1) {
         .shard {
@@ -241,7 +258,7 @@
     }
   } 
 }
-#animalchanger.panda{
+.panda{
   .shard-wraps {
     .shard-wrap {
       &:nth-child(1) {
