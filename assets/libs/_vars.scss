@@ -6,9 +6,12 @@
 //Palette
   $palette: (
     bg:       #fff,
+    bg-black:     rgba(0,0,0,0.8),
+    bg-white:     rgba(255,255,255,0.3),
     bg-alt:   #f4f4f4,
     font-color:     #000,
-    border:   rgba(160,160,160,0.3)
+    border:   rgba(160,160,160,0.3),
+    border-vertical:   rgba(255,255,255,1)
   );
 
 // Font.
@@ -41,8 +44,13 @@
     kerning-heading:          0.25rem
   );
 
-  // Duration.
+// Duration.
   $duration: (
     menu:           0.5s,
     transition:         0.2s
+  );
+
+// Adaptation Widths.需要适配的屏幕宽度
+  $device-widths: (
+    html-widths: (320px, 360px, 375px, 412px, 480px, 640px, 720px, 768px, 1280px)
   );

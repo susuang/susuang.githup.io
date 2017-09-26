@@ -7,7 +7,9 @@
 @import 'font-awesome.min.css';
 
 // Layout
+  @import 'base/media';
   @import 'base/layout';
+
   @import 'layout/wrapper'; 
   @import 'layout/header';
   @import 'layout/main';

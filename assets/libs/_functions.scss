@@ -29,6 +29,10 @@
     @return val($font, $keys...);
   }
 
-// Get a polygon.
-// 
+  ///Get a adaptation widths.
+  /// @param {Array} $device-widths
+  /// @return {string} Value. 
+  @function _width($keys...){
+    @return val($device-widths, $keys...);
+  }
 

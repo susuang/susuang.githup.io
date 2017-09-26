@@ -143,21 +143,21 @@
         let footer = document.getElementById('footer');
         let message = document.getElementById('container-header');
         let stage = document.getElementById('stage');
-
         let stageHeight = bodyHeight - (header.offsetHeight + message.offsetHeight + footer.offsetHeight);
         stage.style.height = stageHeight + "px";
 
         let stageWidth = stage.offsetWidth;
         let animalchanger = document.getElementById('animalchanger');
-        console.info(stageWidth);
         if(stageWidth > stageHeight) {
-          console.info(123);
           animalchanger.style.height = stageHeight + "px";
           animalchanger.style.width = stageHeight * 1.4 + "px";
         }else {
           animalchanger.style.width = stageWidth + "px";
           animalchanger.style.height = stageHeight * (5/7) + "px";
         }
+      }
+      window.onresize = function(){
+        stageHeight();
       } 
     </script>
   </body>

@@ -1,0 +1,29 @@
+// basic font-size
+$rem-base-font-size: 20px;
+
+// Design's Resolution 
+$resolution-width:1280px;
+
+//mixin media
+@mixin media-requries($adaptation-width){
+  // If hava adaptation-width
+  @if $adaptation-width {
+    // Get device width
+    $device-width: _width($adaptation-width);
+
+    @if $adaptation-width == 'html-widths' {
+      @each $current-width in $device-width {
+        @media (min-width: $current-width) {
+          html {
+            $x: $resolution-width / $current-width;
+            font-size: $rem-base-font-size / $x;
+            color: _palette(font-color);
+          } 
+        } 
+      }
+    } 
+  }
+
+
+   
+}
